@@ -1,3 +1,6 @@
+// Add loading class to body initially
+document.body.classList.add('loading');
+
 // Loading screen handler
 window.addEventListener('load', function() {
     // Wait for a minimum time to show the loading screen
@@ -5,6 +8,9 @@ window.addEventListener('load', function() {
         const loadingScreen = document.querySelector('.loading-screen');
         if (loadingScreen) {
             loadingScreen.classList.add('fade-out');
+            
+            // Remove loading class from body
+            document.body.classList.remove('loading');
             
             // Remove from DOM after animation completes
             setTimeout(function() {

@@ -42,6 +42,12 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* When loading screen is active, prevent scrolling */
+body.loading {
+    overflow: hidden;
 }
 
 .container {
