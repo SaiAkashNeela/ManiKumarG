@@ -980,6 +980,14 @@ footer {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+[data-theme="dark"] .loading-screen {
+    background-color: #0c1220; /* Slightly darker than the main dark background */
+}
+
+[data-theme="light"] .loading-screen {
+    background-color: #f0f2f5; /* Slightly lighter than the main light background */
+}
+
 .loading-screen.fade-out {
     opacity: 0;
     visibility: hidden;
