@@ -1,0 +1,20 @@
+{
+  "name": "mani-kumar-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Mani Kumar Guduguntla",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "business analyst",
+    "personal website"
+  ],
+  "author": "Mani Kumar Guduguntla",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+} 
