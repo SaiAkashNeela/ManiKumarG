@@ -868,24 +868,9 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.social-links {
-    display: flex;
-    gap: 20px;
-}
-
-.social-links a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
+    text-align: center;
 }
 
 /* Responsive Styles */
