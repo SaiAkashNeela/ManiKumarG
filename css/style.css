@@ -851,6 +851,14 @@ nav {
     resize: vertical;
 }
 
+.form-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--light-text);
+    text-align: center;
+    font-style: italic;
+}
+
 /* Footer */
 footer {
     background-color: var(--light-bg);

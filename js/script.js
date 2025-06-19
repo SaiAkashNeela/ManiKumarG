@@ -78,19 +78,33 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
             
-            // Here you would typically send the form data to a server
-            // For now, we'll just show an alert
-            alert('Thank you for your message! I will get back to you soon.');
+            // Create mailto link with form data
+            const mailtoLink = `mailto:manikumarguduguntla@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
             
-            // Clear the form
-            contactForm.reset();
+            try {
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Clear the form after a short delay
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 500);
+            } catch (e) {
+                // Fallback for devices where mailto might not work properly
+                alert('Please email me directly at manikumarguduguntla@gmail.com');
+                
+                // Copy email to clipboard as a convenience
+                navigator.clipboard.writeText('manikumarguduguntla@gmail.com').then(() => {
+                    alert('Email address copied to clipboard!');
+                }).catch(() => {
+                    console.error('Failed to copy email to clipboard');
+                });
+            }
         });
     }
     
