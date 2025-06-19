@@ -1,3 +1,19 @@
+// Loading screen handler
+window.addEventListener('load', function() {
+    // Wait for a minimum time to show the loading screen
+    setTimeout(function() {
+        const loadingScreen = document.querySelector('.loading-screen');
+        if (loadingScreen) {
+            loadingScreen.classList.add('fade-out');
+            
+            // Remove from DOM after animation completes
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500); // Match the transition duration in CSS
+        }
+    }, 2000); // Show loading screen for at least 2 seconds
+});
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Theme Switcher
